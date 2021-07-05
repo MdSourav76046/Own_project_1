@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Business Project-Items</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Notice start -->
+    <section class="notice" id="startpage">
+        <p>24 hours Service including offers</p>
+        <p>Store open from 8:00 AM to 10:00 PM</p>
+    </section>
+    <!-- Notice End -->
+    
+    <!-- Navbar Start-->
+    <nav>
+        <img src="../Logo/final_logo.png" alt="">
+        <p class="nav_menu"><i class="fas fa-bars"></i></p>
+        <ul class="nav-list">
+            <li><a href="../index.html" class="active"><span>Home</span></a></li>
+            <li><a href="../Items/items.html" class=""><span>Items</span></a></li>
+            <li><a href="../Shirt/shirts.html" class=""><span>Shirts</span></a></li>
+            <li><a href="../Suit/suit.html" class=""><span>Suit</span></a></li>
+            <li><a href="../Login/login.html" class="">Log In</a></li>
+            <li class="search">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit"><i class="fab fa-searchengin"></i></button>
+            </li>
+            <p class="nav_cross"><i class="fas fa-times"></i></p>
+        </ul>
+    </nav>
+    <!-- Navbar End -->
+
+    <section class="item_info">
+        <div class="item_menu">
+            <p class="item_menu_btn"><i class="fas fa-list-ul"></i>All Items</p>
+            <ul class="item_info_list">
+                <li class="special_offer"><a href="../Special_offers/special_offer.html">Today's Offers</a></li>
+                <li><a href="../Customer_service/customer_service.html">Customer Service</a></li>
+            </ul>
+            <p class="covid">
+                PLEASE STAY HOME,STAY SAFE <i class="fas fa-head-side-mask"></i>
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu List start -->
+    <section class="menu">
+        <div class="menu_caption_div">
+            <p class="menu_caption">Choose your Items</p>
+            <i class="fas fa-times cross"></i>
+        </div>
+        <div class="menu_600px">
+            <ul class="menu_list">
+                <li class="menu_list1 menu_list_li">
+                    <p>Dress Codes</p>
+                    <a href="../Shirt/shirts.html">Shirts <span><i class="fas fa-angle-right"></i></span> </a>
+                    <a href="../Suit/suit.html">Suit <span><i class="fas fa-angle-right"></i></span></a>
+                </li>
+                <li class="menu_list2 menu_list_li">
+                    <p>Business offers</p>
+                    <a href="../Gift_cards/gift_card.html">Gift's Card <span><i class="fas fa-angle-right"></i></span></a>
+                    <a href="../Special_offers/special_offer.html">Special Offers <span>
+                        <i class="fas fa-angle-right"></i></span></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Menu List End -->
+
+    <!-- External active display start -->
+    <section class="blank">
+    
+    </section>
+    <!-- External active display ENd -->
+
+    <!-- Collision start -->
+
+    <section class="carousel_background">
+        <!-- <p><img src="images/suit7.jpg" alt=""></p> -->
+        <section class="carousel-container">
+            <i class="fas fa-angle-double-right" id="rightBtn" onclick="side_slide(1)"></i>
+            <i class="fas fa-angle-double-left" id="leftBtn" onclick="side_slide(-1)"></i>
+            <div class="carousel-slide">
+                <img src="../images/shirt1.jpg" alt="1">
+                <img src="../images/suit1.jpg" alt="2">
+                <img src="../images/shirt2.jpg" alt="3">
+                <img src="../images/suit2.jpg" alt="4">
+                <img src="../images/shirt3.jpg" alt="5">
+                <img src="../images/suit3.jpg" alt="6">
+                <img src="../images/shirt4.jpg" alt="7">
+                <img src="../images/suit5.jpg" alt="8">
+                <img src="../images/shirt5.jpg" alt="9">
+                <img src="../images/suit6.jpg" alt="10">
+                <img src="../images/shirt6.jpg" alt="11">
+                <img src="../images/suit7.jpg" alt="12">
+                <div class="circle_pointer">
+                    <span onclick="btn_slide(1)"></span>
+                    <span onclick="btn_slide(2)"></span>
+                    <span onclick="btn_slide(3)"></span>
+                    <span onclick="btn_slide(4)"></span>
+                    <span onclick="btn_slide(5)"></span>
+                    <span onclick="btn_slide(6)"></span>
+                    <span onclick="btn_slide(7)"></span>
+                    <span onclick="btn_slide(8)"></span>
+                    <span onclick="btn_slide(9)"></span>
+                    <span onclick="btn_slide(10)"></span>
+                    <span onclick="btn_slide(11)"></span>
+                    <span onclick="btn_slide(12)"></span>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Collision End -->
+    <script src="../JS/items.js"></script>
+    <script src="../JS/nav_menu.js"></script>
+</body>
+</html>

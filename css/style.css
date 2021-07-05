@@ -1,0 +1,1619 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 63.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Notice Start */
+
+.notice {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  height: 4vh;
+  color: white;
+  align-items: center;
+}
+
+.notice p {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 900px) {
+  .notice {
+    display: none;
+  }
+}
+
+/* Notice End Start */
+
+/* Navbar Start*/
+
+nav {
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0.653);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  transition: all 1s ease-in-out;
+}
+.nav-list li {
+  padding: 3rem;
+}
+.nav-list li a {
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: 600;
+  padding: 1rem;
+  border: 1px solid transparent;
+}
+.nav-list li a:hover {
+  color: #106a72;
+  border: 1px solid #106a72;
+}
+nav img {
+  height: 50px;
+}
+
+li.search input[type="text"] {
+  padding: 0.5rem;
+}
+
+.search input:active {
+  outline: none;
+}
+.search button {
+  padding: 0.5rem;
+  background-color: black;
+}
+.search button:hover {
+  cursor: pointer;
+  background-color: #106a72;
+}
+.search button i {
+  color: white;
+}
+nav p {
+  display: none;
+}
+.nav_cross {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+  .nav-list li a {
+    font-size: 2rem;
+    padding: 0.8rem;
+  }
+  nav img {
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .nav-list li {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .nav_menu {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 2.3rem;
+    right: 5%;
+  }
+  .nav_cross {
+    display: block;
+    position: absolute;
+    top: 6%;
+    right: 10%;
+    z-index: 2;
+    font-size: 3rem;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    right: -50vw;
+    top: 0;
+    height: 100vh;
+    transition: all 1s ease-in-out;
+    width: 40rem;
+  }
+  .nav-list.visible {
+    display: flex;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .nav-list {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 500px) {
+}
+
+/* Navbar End */
+
+/* Body Start */
+
+#home {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/wallpaper3.jpg");
+  height: 86vh;
+  width: 100vw;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+}
+
+section .intro1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: leftIn 0.5s ease-in-out;
+  font-weight: bold;
+}
+section .intro1 .man {
+  color: #106a72;
+}
+
+.intro2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  animation: rightIn 0.5s ease-in-out;
+}
+
+.a_btn {
+  background-color: black;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0.2rem 0.2rem 0.2rem black;
+  opacity: 1;
+  animation: fadeGone 1s ease-in-out;
+  transition: all 0.5s;
+  transform: translateY(0);
+  display: inline-block;
+}
+.first {
+  margin-right: 2rem;
+}
+
+.a_btn:hover {
+  background-color: #106a72;
+  transform: translateY(-0.8rem);
+}
+
+@keyframes leftIn {
+  0% {
+    transform: translateX(-20vw);
+  }
+  80% {
+    transform: translateX(3vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightIn {
+  0% {
+    transform: translateX(20vw);
+  }
+  80% {
+    transform: translateX(-3vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeGone {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #home {
+    height: 90vh;
+  }
+}
+@media only screen and (max-width: 700px) {
+  section .intro1 {
+    font-size: 3.55rem;
+    font-weight: bold;
+  }
+  section .intro2 {
+    font-size: 1.6rem;
+  }
+  .a_btn {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  section .intro1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  section .intro2 {
+    font-size: 1.6rem;
+  }
+  .a_btn {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  section .intro1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  section .intro2 {
+    font-size: 1.2rem;
+  }
+  .a_btn {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  section .intro1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+  }
+  section .intro2 {
+    font-size: 1.2rem;
+  }
+  .a_btn {
+    font-size: 0.8rem;
+  }
+}
+
+/* Body End */
+
+/* explore start */
+
+#explore {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  flex-direction: column;
+  /* background-color: #ddd; */
+  /* background: linear-gradient(
+    to right,
+    rgba(16, 106, 114, 0.2),
+    rgba(16, 106, 114, 0.1),
+    rgba(16, 106, 114, 0),
+    rgba(16, 106, 114, 0),
+    rgba(16, 106, 114, 0),
+    rgba(16, 106, 114, 0),
+    rgba(16, 106, 114, 0),
+    rgba(16, 106, 114, 0),
+    rgba(16, 106, 114, 0.1),
+    rgba(16, 106, 114, 0.2)
+  ); */
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.greetings {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+.greetings span {
+  color: rgb(16, 106, 114);
+  font-weight: bold;
+}
+.institution-info {
+  font-size: 2rem;
+  text-align: justify;
+  width: 88%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.institution-info::first-letter {
+  margin-left: 2rem;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+}
+.what_we_provide p {
+  font-size: 2rem;
+  margin-bottom: 3.3rem;
+}
+.what_we_provide p i {
+  height: 5rem;
+  width: 5rem;
+  font-size: 4rem;
+  color: #106a72;
+  margin-right: 1rem;
+}
+.service_pic img {
+  height: 50vh;
+  width: 20vw;
+}
+.cross {
+  position: absolute;
+  top: 2rem;
+  font-size: 3rem;
+  right: 3rem;
+  cursor: pointer;
+}
+.promotion {
+  font-size: 3rem;
+  text-align: center;
+}
+.link {
+  font-size: 1.9rem;
+  text-align: center;
+}
+.link a {
+  color: #106a72;
+}
+.our_service {
+  margin-top: 3rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  #explore {
+    height: 70vh;
+  }
+  .greetings {
+    font-size: 3.8rem;
+  }
+  .institution-info {
+    font-size: 2rem;
+  }
+  .what_we_provide p {
+    font-size: 2rem;
+  }
+  .what_we_provide p i {
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 3.5rem;
+  }
+  .what_we_provide p span {
+    font-size: 2rem;
+  }
+  .service_pic img {
+    height: 40vh;
+    width: 20vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .greetings {
+    font-size: 3.4rem;
+  }
+  .institution-info {
+    font-size: 1.8rem;
+    margin-bottom: 8vh;
+  }
+  .what_we_provide p {
+    font-size: 1.7rem;
+  }
+  .what_we_provide p i {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2.5rem;
+  }
+  .what_we_provide p span {
+    font-size: 1.7rem;
+    margin-left: 1rem;
+  }
+  .service_pic img {
+    height: 33vh;
+    width: 20vw;
+  }
+  .promotion {
+    font-size: 2.4rem;
+  }
+  .link {
+    font-size: 1.5rem;
+  }
+  .cross {
+    right: 2rem;
+    top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .service_pic {
+    display: none;
+  }
+  .greetings {
+    font-size: 3rem;
+  }
+  .institution-info {
+    font-size: 1.8rem;
+  }
+  .what_we_provide p {
+    font-size: 1.3rem;
+    padding: 1rem 0;
+  }
+  .what_we_provide p i {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2.4rem;
+  }
+  .what_we_provide p span {
+    font-size: 1.5rem;
+  }
+  .service_pic img {
+    height: 50vh;
+    width: 20vw;
+  }
+  .promotion {
+    font-size: 2.2rem;
+  }
+  .link {
+    font-size: 1.4rem;
+  }
+  .cross {
+    right: 2rem;
+    top: 2rem;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .institution-info {
+    font-size: 1.8rem;
+  }
+  .cross {
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2.4rem;
+  }
+  .greetings {
+    font-size: 2.4rem;
+  }
+  .promotion {
+    font-size: 2rem;
+  }
+  .link {
+    font-size: 1.2rem;
+  }
+  .our_service {
+    margin-top: 5rem;
+  }
+  .what_we_provide p {
+    margin-left: 1rem;
+  }
+  .what_we_provide p i {
+    height: 3rem;
+    width: 3rem;
+    font-size: 3.5rem;
+    padding: 0.5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .greetings {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .institution-info {
+    font-size: 1.5rem;
+  }
+  .promotion {
+    font-size: 2rem;
+  }
+  .link {
+    font-size: 1.2rem;
+  }
+  .what_we_provide {
+    margin-left: 1rem;
+  }
+  .what_we_provide p {
+    padding: 0.1rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .greetings {
+    font-size: 2rem;
+  }
+  .institution-info {
+    font-size: 1.5rem;
+  }
+  .promotion {
+    font-size: 1.8rem;
+  }
+  .link {
+    font-size: 1.3rem;
+  }
+  .what_we_provide p span {
+    font-size: 1.2rem;
+  }
+}
+/* Explore Ends */
+
+/* INDEX.HTML START*/
+
+/* Item_info starts */
+
+.item_menu {
+  display: flex;
+  background-color: #106a72;
+  color: white;
+  height: 4vh;
+  align-items: center;
+  font-size: 1.5rem;
+  animation: leftSlideIn 0.7s ease-in-out;
+}
+.item_menu p {
+  cursor: pointer;
+  padding: 0.2rem;
+  border: 1px solid transparent;
+}
+.item_menu p:hover {
+  border: 1px solid white;
+}
+.item_menu p i {
+  margin-left: 1rem;
+}
+.item_menu ul {
+  display: flex;
+}
+.item_menu ul a {
+  color: white;
+  margin: 2rem;
+  padding: 0.2rem;
+  border: 1px solid transparent;
+}
+.item_menu ul a:hover {
+  border: 1px solid white;
+}
+.covid {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 700px) {
+  .item_menu {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .special_offer {
+    display: none;
+  }
+  .covid {
+    display: none;
+  }
+}
+/* Item_info ends */
+
+/* Menu start */
+
+.menu {
+  height: 100vh;
+  width: 40vw;
+  background-color: rgb(16, 106, 114);
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  transition: all 0.5s ease-in-out;
+  z-index: 3;
+}
+.menu_600px {
+  width: 70%;
+  margin: auto;
+}
+.menu .menu_caption_div {
+  font-size: 3rem;
+  background-color: black;
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.menu_list {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-evenly;
+}
+.menu .menu_caption_div i {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: white;
+  font-size: 4rem;
+  right: 7%;
+}
+.menu .menu_list_li {
+  /* margin: 5rem; */
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.menu .menu_list_li p {
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.menu .menu_list_li p::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.15rem;
+  background-color: #fff;
+  top: -10%;
+  left: 0;
+}
+
+.menu .menu_list_li p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #fff;
+  top: 110%;
+  left: 0;
+  z-index: 1;
+}
+.menu .menu_list_li a {
+  color: white;
+  width: 90%;
+  font-size: 2rem;
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid transparent;
+}
+.menu .menu_list_li a:hover {
+  border: 1px solid #fff;
+}
+.menu .menu_list_li a i {
+  float: right;
+}
+@media only screen and (max-width: 1200px) {
+  .menu .menu_caption {
+    font-size: 3.4rem;
+  }
+  .menu .menu_list_li {
+    margin: 4rem;
+  }
+  .menu_600px {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .menu_600px {
+    width: 95%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .menu .menu_caption {
+    font-size: 2.9rem;
+  }
+  .menu {
+    width: 50vw;
+  }
+  /* .menu .menu_list_li{
+  } */
+}
+@media only screen and (max-width: 800px) {
+  .menu .menu_list_li p {
+    font-size: 2rem;
+  }
+  .menu {
+    width: 60vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 100vw;
+  }
+  .menu .menu_caption {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .menu .menu_caption {
+    font-size: 2.4rem;
+  }
+  .menu .menu_list_li a {
+    font-size: 1.5rem;
+  }
+}
+/* Menu End */
+
+/* External active display start  */
+
+.blank {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+
+/* External active display end  */
+
+/* Carousel start */
+.carousel_background {
+  width: 100vw;
+  height: 82vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/shirt1.jpg");
+  background-position: center;
+  overflow: hidden;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 40vw;
+  height: 70vh;
+  /* margin: auto; */
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  animation: upDOwn 0.7s ease-in-out;
+}
+.carousel-slide {
+  display: flex;
+  width: 65%;
+  overflow: hidden;
+}
+.carousel-slide img {
+  height: 95%;
+  width: 100%;
+  position: relative;
+}
+#rightBtn {
+  position: absolute;
+  font-size: 3rem;
+  right: 6%;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: white;
+}
+#leftBtn {
+  position: absolute;
+  font-size: 3rem;
+  left: 6%;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: white;
+}
+.circle_pointer {
+  position: absolute;
+  bottom: -2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+}
+.circle_pointer span {
+  height: 1rem;
+  width: 1rem;
+  margin: 0 1rem;
+  border-radius: 50%;
+  border: 0.2rem solid #fff;
+  cursor: pointer;
+}
+
+@keyframes upDOwn {
+  0% {
+    transform: translateY(-30rem);
+  }
+  80% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftSlideIn {
+  0% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .carousel-container {
+    width: 60vw;
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .carousel-container {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .carousel_background {
+    height: 86vh;
+  }
+  .carousel-container {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .carousel-container {
+    width: 89vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .carousel-container {
+    width: 90vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .carousel-container {
+    width: 100vw;
+    height: 55vh;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .carousel-container {
+    width: 100%;
+  }
+  .circle_pointer span {
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .carousel-container {
+    width: 100vw;
+    height: 50vh;
+  }
+  .circle_pointer span {
+    height: 0.6rem;
+    width: 0.6rem;
+  }
+}
+
+/* Carousel  end */
+
+/* INDEX.HTML ENDS */
+
+/* SHIRTS.HTML START */
+
+/* Caption start */
+
+.shirt_caption p {
+  font-size: 3rem;
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    rgba(16, 106, 114, 0.3),
+    rgba(16, 106, 114, 0.1)
+  );
+  margin-top: 2rem;
+}
+/* Caption End  */
+
+/* shirt product start */
+.shirt_product-list {
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  justify-content: space-around;
+  position: relative;
+}
+
+.page {
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+  margin-top: 2rem;
+}
+.page i {
+  color: rgba(16, 106, 114, 1);
+  margin-right: 1rem;
+  font-size: 3rem;
+}
+.product {
+  margin-top: 3rem;
+  width: 25rem;
+  height: 40rem;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.3rem 0.3rem 0.3rem black;
+  margin: 2.5rem;
+  justify-content: space-between;
+}
+.image {
+  width: 100%;
+  height: 65%;
+  position: relative;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.product .image img {
+  height: 100%;
+  width: 100%;
+}
+.image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.4s;
+}
+.image_overlay:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.product .shirt_info {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Benne", serif;
+}
+.product .shirt_info i,
+.product .shirt_price i {
+  color: rgba(16, 106, 114, 1);
+}
+.shirt_size {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Benne", serif;
+}
+.shirt_size p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.shirt_size li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 2.6rem;
+  width: 2.6rem;
+  border: 1px solid black;
+  padding: 0.2rem 0.3rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shirt_size li:hover {
+  background-color: rgb(52, 133, 140, 1);
+  color: #fff;
+  border: 1px solid #fff;
+}
+.product .shirt_price {
+  font-family: "Benne", serif;
+  margin-left: 1rem;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+.product .shirt_price i {
+  font-size: 1.5rem;
+}
+.shirt_price_dollar {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.product .cart {
+  color: black;
+  font-size: 1.5rem;
+  background-color: rgb(52, 133, 140, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Benne", serif;
+  /* height: 3rem; */
+  padding: 0.1rem 0.3rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+.product .cart:hover {
+  background-color: rgb(52, 133, 140, 0.5);
+}
+.product .price_and_cart {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.product .cart i {
+  color: rgb(0, 0, 0);
+  margin-left: 0.5rem;
+}
+.shirt_more a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 1.9rem;
+  opacity: 0;
+  transition: all 0.4s;
+  border: 1px solid white;
+  padding: 0rem 0.5rem;
+  font-family: "Benne", serif;
+}
+.shirt_more a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+.image_overlay:hover ~ div.shirt_more a {
+  opacity: 1;
+}
+.visit {
+  margin-top: 4rem;
+  font-size: 2rem;
+  color: rgba(16, 106, 114, 1);
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.mens_link {
+  font-size: 3rem;
+  color: black;
+}
+.visit a::after {
+  content: "";
+  height: 0.1rem;
+  width: 100%;
+  position: absolute;
+  bottom: -2rem;
+  left: 0%;
+  background-color: rgba(16, 106, 114, 1);
+}
+.visit a::before {
+  content: "";
+  height: 0.1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 5rem;
+  left: 0%;
+  background-color: rgba(16, 106, 114, 1);
+}
+
+.page_number {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.page_number ul {
+  display: flex;
+  font-size: 2.3rem;
+}
+.page_number ul a {
+  margin: 1rem;
+}
+.page_number ul li {
+  margin: 1rem;
+}
+.page_number ul a {
+  color: black;
+  border: 1px solid black;
+  padding: 0.1rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.page_number ul a:hover {
+  background-color: rgba(16, 106, 114, 1);
+  color: #fff;
+  border: 1px solid #fff;
+}
+.page_number ul a:hover span {
+  color: #fff;
+}
+.page_number ul i {
+  font-size: 2rem;
+}
+.page_number_1 {
+  background-color: rgba(16, 106, 114, 1);
+}
+.page_number_1 span {
+  color: white;
+}
+
+@media only screen and (max-width: 1050px) {
+  .product {
+    margin: 2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .product {
+    height: 32rem;
+    width: 20rem;
+    margin: 1rem;
+  }
+  .product .shirt_info {
+    font-size: 1.6rem;
+  }
+  .shirt_size li {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+  .product .cart {
+    font-size: 1.2rem;
+    height: 3rem;
+    padding: 0.2rem 0.4rem;
+  }
+  .shirt_more a{
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .product {
+    height: 30rem;
+    width: 19rem;
+  }
+  .shirt_caption p {
+    font-size: 3rem;
+  }
+  .product .shirt_info {
+    font-size: 1.2rem;
+  }
+  .shirt_size li {
+    font-size: 0.6rem;
+    font-weight: bold;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .product .price_and_cart {
+    height: 4rem;
+    margin-top: 1rem;
+  }
+  .product .cart {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    margin-top: 5rem;
+  }
+  .price_and_cart .shirt_price {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .shirt_caption p {
+    font-size: 2.5rem;
+  }
+  .shirt_more a{
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .product {
+    height: 30rem;
+    width: 16rem;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+  .shirt_caption p {
+    font-size: 2.2rem;
+  }
+  .product .shirt_info {
+    font-size: 1.4rem;
+  }
+  .shirt_size li {
+    font-size: 0.8rem;
+    font-weight: bold;
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+  .product .cart {
+    font-size: 1rem;
+  }
+  .shirt_product-list {
+    width: 100vw;
+  }
+  .shirt_more a{
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .product {
+    height: 35rem;
+    width: 20rem;
+    margin-bottom: 3rem;
+  }
+  .shirt_caption p {
+    font-size: 2rem;
+  }
+  .shirt_more a{
+    font-size: 1rem;
+  }
+}
+
+/* shirt product End */
+
+/* SHIRTS.HTML ENDS */
+
+/* LOGIN.HTML START */
+
+/* login Start */
+.login_area {
+  height: 86.5vh;
+  width: 100vw;
+  margin-top: 2rem;
+  margin: auto;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(16, 106, 114, 0.3),
+    rgba(16, 106, 114, 0.4),
+    rgba(16, 106, 114, 0.6),
+    rgba(16, 106, 114, 0.8)
+  );
+  /* background: linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,.2)); */
+}
+.login {
+  width: 40%;
+  background-color: #fff;
+  height: 75vh;
+  margin: auto;
+  border-radius: 2rem;
+}
+.login_form {
+  width: 65%;
+  height: 100%;
+  margin: auto;
+  border-radius: 2rem;
+  z-index: 1;
+  /* background-color: blueviolet; */
+}
+.login_form div {
+  margin: 2rem 0;
+}
+.login_form .caption {
+  font-size: 3rem;
+  text-align: start;
+  margin: 3rem 0;
+  font-weight: bold;
+}
+.name,
+.password,
+.Email {
+  width: 100%;
+  position: relative;
+}
+.btn {
+  width: 100%;
+}
+.login_form input {
+  padding: 0.7rem;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(16, 106, 114, 1);
+  padding-left: 3rem;
+}
+.name input::placeholder,
+.password input::placeholder,
+.Email input::placeholder {
+  font-size: 1.5rem;
+  color: #999;
+  letter-spacing: 0.1rem;
+}
+.login_form input:focus:invalid {
+  border-bottom: 2px solid rgb(202, 10, 10);
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+.btn button {
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background: linear-gradient(
+    to right,
+    rgba(16, 106, 114, 1),
+    rgba(16, 106, 114, 0.9),
+    rgba(16, 106, 114, 0.7),
+    rgba(16, 106, 114, 0.6)
+  );
+  cursor: pointer;
+  color: #fff;
+}
+.btn i {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 2rem;
+  color: white;
+}
+.btn {
+  position: relative;
+}
+.login_form .social_signin {
+  font-size: 2rem;
+  text-align: center;
+  color: #999;
+}
+.social_media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: aqua; */
+}
+.social_media a {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0.5rem 0;
+}
+.social_media a {
+  color: #fff;
+}
+.social_media a i {
+  margin-right: 1rem;
+}
+.social_media .fb {
+  background: linear-gradient(
+    to right,
+    rgba(59, 89, 152, 1),
+    rgba(59, 89, 152, 0.9),
+    rgba(59, 89, 152, 0.7)
+  );
+}
+.social_media .twit {
+  background: linear-gradient(
+    to right,
+    rgba(29, 161, 242, 1),
+    rgba(29, 161, 242, 0.7)
+  );
+}
+.social_media .insta {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+.name i,
+.password i,
+.Email i {
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+  margin-right: 2rem;
+  color: rgba(16, 106, 114, 1);
+}
+.signup_link {
+  font-size: 1.4rem;
+  color: #666;
+}
+.signup_link a {
+  margin-left: 1rem;
+  color: rgba(16, 106, 114, 1);
+}
+/* login_End */
+
+/* Credit start*/
+.credit {
+  font-size: 2rem;
+  /* color: rgba(16, 106, 114, 1); */
+  text-align: center;
+  margin: 5rem 0;
+}
+.credit span {
+  font-size: 3rem;
+  color: rgba(16, 106, 114, 1);
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1200px) {
+  .login {
+    width: 45%;
+  }
+  .login_form {
+    justify-content: space-evenly;
+  }
+  .social_media {
+    margin: 4rem 0;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .login {
+    width: 50%;
+  }
+  .login_form {
+    width: 65%;
+  }
+  .social_media {
+    margin: 4rem 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .login {
+    width: 55%;
+  }
+  .login_form {
+    width: 70%;
+  }
+  .social_media {
+    margin: 4rem 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .login {
+    width: 60%;
+  }
+  .login_form {
+    width: 70%;
+  }
+  .social_media {
+    margin: 4rem 0;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .login {
+    width: 65%;
+  }
+  .login_form {
+    width: 75%;
+  }
+  .social_media {
+    margin: 4rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 70%;
+  }
+  .login_form {
+    width: 75%;
+  }
+  .social_media {
+    margin: 4rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .login {
+    width: 75%;
+  }
+  .login_form {
+    width: 75%;
+  }
+  /* .social_media{
+    margin: 4rem 0;
+  } */
+  .social_signin {
+    font-size: 0.3rem;
+  }
+  .name i,
+  .password i,
+  .email i {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+  }
+  .btn button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .login {
+    width: 80%;
+  }
+  .login_form {
+    width: 75%;
+  }
+  /* .social_media{
+    margin: 4rem 0;
+  } */
+  .social_signin {
+    font-size: 0.3rem;
+  }
+  .name i,
+  .password i,
+  .email i {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .login {
+    width: 90%;
+  }
+  .login_form {
+    width: 80%;
+  }
+  /* .social_media{
+    margin: 4rem 0;
+  } */
+  .social_signin {
+    font-size: 0.3rem;
+  }
+
+  .name input::placeholder,
+  .password input::placeholder,
+  .Email input::placeholder {
+    font-size: 1.5rem;
+    color: #999;
+    letter-spacing: 0.1rem;
+  }
+  .login_form .social_signin {
+    font-size: 1rem;
+  }
+}
+/* Credit End */
+
+/* LOGIN.HTML ENDS */
